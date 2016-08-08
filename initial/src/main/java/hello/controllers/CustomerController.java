@@ -26,9 +26,17 @@ public class CustomerController {
 //            throws CustomException {
     public ResponseSuccess create(@RequestBody Customer customer)
             throws CustomException {
-        // http://ryanjbaxter.com/2014/12/17/building-rest-apis-with-spring-boot/
+        // http://ryanjbaxter.com/2014/12/17/building-rest-apis-with-spring-boot/  <--
+        // https://spring.io/guides/gs/accessing-data-jpa/   <--
         // https://spring.io/guides
         // https://spring.io/guides/gs/spring-boot/#initial
+        // https://spring.io/guides/gs/accessing-data-rest/
+        // http://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html
+        // http://spring.io/guides/tutorials/bookmarks/
+        // http://stackoverflow.com/questions/3686808/spring-3-requestmapping-get-path-value
+        // http://stackoverflow.com/questions/32201441/how-do-i-retrieve-query-string-parameter-in-spring-boot
+        // http://atmarkplant.com/spring-boot-request-parameters/
+        
         System.out.println("trying to create customer: " + customer.getFirstName() + " " + customer.getLastName());
         if (customer.getFirstName().equalsIgnoreCase("juan")) {
             System.out.println("\tcannot create " + customer.getFirstName() + " " + customer.getLastName());
